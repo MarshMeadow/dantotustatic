@@ -28,9 +28,9 @@
     scroll-behavior: smooth;
   }
 </style>
-<body class="bg-indigo-950">
+<body class="bg-indigo-950">     
   <!-- NAVBAR -->
-  <nav class="bg-slate-950 bg-opacity-90 text-white p-2 fixed w-full z-10">
+  <nav class="bg-slate-950 bg-opacity-0 transition bg-transition text-white p-2 fixed w-full z-50 ">
     <div class="container mx-auto flex justify-between">
       <div class="flex items-center">
         <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 hover:opacity-80"></a>
@@ -57,10 +57,10 @@
       </div>      
     </div>
   </div>
-  <div class="absolute inset-0 bg-slate-950 bg-opacity-80"></div>
+  <div class="absolute inset-0 bg-black bg-opacity-80 shadow-md"></div>
 </section>
 <!-- FEATURE 1 -->
-<section class=" text-white py-8" id="section1">
+<section class=" text-white py-8 shadow-md" id="section1">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
     <!-- Box one, feature description -->
     <div class="md:w-1/2 md:pr-4 mb-4 md:mb-0">
@@ -73,7 +73,6 @@
     </div>
   </div>
 </section>
-<br />
 <!-- FEATURE 2 -->
 <section class="bg-purple-950 text-white py-8" id="section2">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
@@ -97,7 +96,7 @@
   </div>
 </section>
 <!--Feature 3-->
-<section class=" text-white py-8" id="section1">
+<section class=" text-white py-8 shadow-md" id="section1">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
     <!-- Box one, feature description -->
     <div class="md:w-1/2 md:pr-4 mb-4 md:mb-0">
@@ -110,14 +109,13 @@
     </div>
   </div>
 </section>
-<br />
 <!-- Review Section-->
 <section class="py-8 text-white">
   <div class="container mx-auto">
     <h1 class="text-3xl font-bold text-center mb-4">Reviews of the app</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Review 1 -->
-      <div class="bg-white p-4 rounded-lg shadow-md text-black">
+      <div class="bg-white p-4 rounded-lg shadow-xl text-black">
         <div class="flex items-center mb-2">
           <img src="images/Discordpfps/aa31dc99f8cce991d430cd19e25f8ab2.jpg" alt="Reviewer Avatar" class="w-12 h-12 rounded-full">
           <p class="text-lg font-bold ml-2">zaxx_69</p>
@@ -127,7 +125,7 @@
       </div>
 
       <!-- Review 2 -->
-      <div class="bg-white p-4 rounded-lg shadow-md text-black">
+      <div class="bg-white p-4 rounded-lg shadow-xl text-black">
         <div class="flex items-center mb-2">
           <img src="images/Discordpfps/4b38019d3a3c1f820ce020f036ae6cc0.png" alt="Reviewer Avatar" class="w-12 h-12 rounded-full">
           <p class="text-lg font-bold ml-2">jotaro_4k20</p>
@@ -143,43 +141,44 @@
 <br />
 <!-- Staff Showcase Popup -->
 <div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-  <div class="bg-white p-4 rounded-lg shadow-lg">
+  <div class="bg-white p-4 md:mx-4 rounded-lg shadow-lg w-full md:w-auto max-h-[80vh] overflow-y-auto">
     <div class="text-right">
       <button id="closePopup" class="text-gray-500 hover:text-gray-700 text-lg">Close</button>
     </div>
     <h2 class="text-2xl font-bold mb-4">Website Credits</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff1.jpg" alt="Staff Member 1" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Rebel Union</p>
-        <p class="text-gray-600">Creator of Dantotsu</p>
+        <img src="images/staff1.jpg" alt="Staff Member 1" class="w-20 h-20 rounded-full mb-2 mx-auto md:mx-0">
+        <p class="text-lg font-bold mb-2 text-center">Rebel Union</p>
+        <p class="text-gray-600 text-center">Creator of Dantotsu</p>
       </div>
       <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 2" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">wai_what</p>
-        <p class="text-gray-600">Branding creator / Screenshots Provider</p>
+        <img src="images/staff2.jpg" alt="Staff Member 2" class="w-20 h-20 rounded-full mb-2 mx-auto md:mx-0">
+        <p class="text-lg font-bold mb-2 text-center">wai_what</p>
+        <p class="text-gray-600 text-center">Branding creator / Screenshots Provider</p>
       </div>
       <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 3" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Ayodaza</p>
-        <p class="text-gray-600">Graphic Designer / Main Dev for Dantotsu website</p>
+        <img src="images/staff2.jpg" alt="Staff Member 3" class="w-20 h-20 rounded-full mb-2 mx-auto md:mx-0">
+        <p class="text-lg font-bold mb-2 text-center">Ayodaza</p>
+        <p class="text-gray-600 text-center">Graphic Designer / Main Dev for Dantotsu website</p>
       </div>
       <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 4" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Neko</p>
-        <p class="text-gray-600">Main Dev for Dantotsu website (Neocities)</p>
+        <img src="images/staff2.jpg" alt="Staff Member 4" class="w-20 h-20 rounded-full mb-2 mx-auto md:mx-0">
+        <p class="text-lg font-bold mb-2 text-center">Neko</p>
+        <p class="text-gray-600 text-center">Main Dev for Dantotsu website (Neocities)</p>
       </div>
       <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 5" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">aayush262</p>
-        <p class="text-gray-600">Phone mockups designer</p>
+        <img src="images/staff2.jpg" alt="Staff Member 5" class="w-20 h-20 rounded-full mb-2 mx-auto md:mx-0">
+        <p class="text-lg font-bold mb-2 text-center">aayush262</p>
+        <p class="text-gray-600 text-center">Phone mockups designer</p>
       </div>
     </div>
   </div>
 </div>
 
+
   <!-- FOOTER -->
-<footer class="bg-slate-950 text-white py-4">
+<footer class="bg-slat e-950 text-white py-4">
   <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
     <div class="md:w-full text-center md:text-left mb-2 md:mb-0">
       <p class="text-sm">© 2023 Dantotsu. All rights reserved. | Design by @Ayodaza </p>
@@ -192,6 +191,15 @@
 
 </body>
 <script>
+  // navbar
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('nav');
+    if (window.scrollY > 0) {
+      navbar.classList.add('bg-opacity-90');
+    } else {
+      navbar.classList.remove('bg-opacity-90');
+    }
+  });
   // Open the staff showcase popup
   document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('staffPopup').classList.remove('hidden');
@@ -201,7 +209,7 @@
   document.getElementById('closePopup').addEventListener('click', function () {
     document.getElementById('staffPopup').classList.add('hidden');
   });
-</script>
+</script>      
 
 
 </html>
