@@ -12,13 +12,13 @@
   <meta property="og:url" content="URL of the page"> <!-- Rebel, put the domain here -->
   <meta name="twitter:card" content="summary_large_image"> <!-- Soon  -->
   <meta name="twitter:site" content="@yourtwitterhandle"> <!-- Soon -->
-  <link rel="canonical" href="https://www.example.com/your-page"> <!-- Rebel, put the domain here -->  
+  <link rel="canonical" href="https://dantotsu.app/"> 
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="manifest" href="favicons/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#4d006b">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/0a1007e48a.js" crossorigin="anonymous"></script>
   <title>Dantotsu</title>
@@ -33,7 +33,8 @@
   <nav class="bg-slate-950 bg-opacity-0 transition bg-transition text-white p-2 fixed w-full z-50 ">
     <div class="container mx-auto flex justify-between">
       <div class="flex items-center">
-        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 hover:opacity-80"></a>
+        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 hover:opacity-80" ></a>
+        <small class="text-xs ml-2">v1.0.0 (Beta)</small>
       </div>
       <div class="flex items-center">
         <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
@@ -47,14 +48,14 @@
   <div class="container h-full mx-auto flex flex-col justify-center items-center relative z-10">
     <div class="text-center">
       <h1 class="text-5xl font-bold">Dantotsu</h1>
-      <h2 class="text-2xl font-bold">Read & Watch Anywhere (V1.00)</h2>
-      <h4 class="text-lg">Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions</h4>
-      <div class="flex justify-center items-center mt-10">
-        <!-- download button -->
-        <a href="https://github.com/rebelonion/Dantotsu/releases" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full mr-4">Download</a>
-        <!-- view features button -->
-        <a  href="#section1" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full">Features</a>
-      </div>      
+      <h2 class="text-2xl font-bold">Read & Watch Anywhere</h2>
+      <p class="text-sm">Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions</h4>
+      <div class="flex justify-center items-center mt-8 space-x-4">
+          <!-- download button -->
+        <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full py-3 px-10 font-bold">Download</button>
+          <!-- view features button -->
+        <a href="#section1" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full">Features</a>
+      </div>
     </div>
   </div>
   <div class="absolute inset-0 bg-black bg-opacity-80 shadow-md"></div>
@@ -96,7 +97,7 @@
   </div>
 </section>
 <!--Feature 3-->
-<section class=" text-white py-8 shadow-md" id="section1">
+<section class=" text-white py-8" id="section1">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
     <!-- Box one, feature description -->
     <div class="md:w-1/2 md:pr-4 mb-4 md:mb-0">
@@ -143,33 +144,45 @@
 <div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden">
   <div class="bg-slate-800 p-4 md:mx-4 rounded-lg shadow-lg w-full md:w-auto max-h-[80vh] overflow-y-auto">
     <div class="text-right">
-      <button id="closePopup" class="text-gray-500 hover:text-gray-700 text-lg">Close</button>
+      <button id="closePopup" class="text-gray-500 hover:text-gray-700 text-lg p-4">Close</button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="bg-slate-900 p-4 rounded-lg shadow-md">
         <img src="images/Discordpfps/rebelonion.png" alt="Rebel Union" class="w-20 h-20 rounded-full mb-2">
         <p class="text-lg text-purple-600 font-bold mb-2">Rebel Union</p>
         <p class="text-gray-500">Creator of Dantotsu</p>
+        <!-- social icons-->
+        <div class="flex items-center mt-4">
+          <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 text-white hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
+          <a href="https://www.github.com/rebelonion" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
       <div class="bg-slate-900 p-4 rounded-lg shadow-md">
         <img src="images/Discordpfps/waiwaht.png" alt="Wai What" class="w-20 h-20 rounded-full mb-2">
         <p class="text-lg text-purple-600 font-bold mb-2">Wai What</p>
-        <p class="text-gray-500">Creator of Dantotsu's branding</p>
+        <p class="text-gray-500">Creator of Dantotsu's Branding</p>
+        
       </div>
       <div class="bg-slate-900 p-4 rounded-lg shadow-md">
         <img src="images/Discordpfps/neko.png" alt="Neko404" class="w-20 h-20 rounded-full mb-2">
         <p class="text-lg text-purple-600 font-bold mb-2">Neko404</p>
-        <p class="text-gray-500">Main dev for Dantotsu's website</p>
+        <p class="text-gray-500">Main Dev For Dantotsu's Website</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/MarshMeadow" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
       <div class="bg-slate-900 p-4 rounded-lg shadow-md">
         <img src="images/Discordpfps/ayodaza.png" alt="Ayodaza" class="w-20 h-20 rounded-full mb-2">
         <p class="text-lg text-purple-600 font-bold mb-2">Ayodaza</p>
-        <p class="text-gray-500">Main dev for Dantotsu's website/p>
+        <p class="text-gray-500">Main Dev For Dantotsu's Website / Main Designer</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/dazadev" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
       <div class="bg-slate-900 p-4 rounded-lg shadow-md">
         <img src="images/Discordpfps/aayum.jpg" alt="Aayum" class="w-20 h-20 rounded-full mb-2">
         <p class="text-lg text-purple-600 font-bold mb-2">Aayum</p>
-        <p class="text-gray-500">Screenshot provider</p>
+        <p class="text-gray-500">Screenshot Provider</p>
       </div>
     </div>
 
@@ -180,10 +193,10 @@
 
 
   <!-- FOOTER -->
-<footer class="bg-slat e-950 text-white py-4">
+<footer class="bg-slate-950 text-white py-4">
   <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
     <div class="md:w-full text-center md:text-left mb-2 md:mb-0">
-      <p class="text-sm">© 2023 Dantotsu. All rights reserved. | Design by @Ayodaza </p>
+      <p class="text-sm">© 2023 Dantotsu. All rights reserved.</p>
     </div>
     <div class="md:w-full text-center md:text-right">
       <button id="openPopup" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">Credits</button>
