@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions">
+  <meta name="description" content="An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions">
   <meta name="author" content="Rebel-Onion">
-  <meta name="keywords" content="Anilist, OpenSource, Tachiyomi, Aniyomi, Anime-app">
+  <meta name="keywords" content="Anilist Client, OpenSource, Tachiyomi, Aniyomi, Anime app, Anilist Sync">
   <meta property="og:title" content="Dantotsu">
-  <meta property="og:description" content="Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions">
-  <meta property="og:image" content="URL of an image to display"> <!-- Rebel, put the image here -->
-  <meta property="og:url" content="URL of the page"> <!-- Rebel, put the domain here -->
+  <meta property="og:description" content="An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions">
+  <meta property="og:image" content="https://camo.githubusercontent.com/b602dc16714771a5c1025f735880172d4d87aeb5d1093bee8a2bf9a2c5f11e85/68747470733a2f2f706278742e7265706c69636174652e64656c69766572792f3250583934766944366c4a53445661795172477944483743477537496a513665384845744f474465656c65665852644f432f6f75742e706e67"> <!-- Rebel, put the image here -->
+  <meta property="og:url" content="https://dantotsu.app/"> <!-- Rebel, put the domain here -->
   <meta name="twitter:card" content="summary_large_image"> <!-- Soon  -->
   <meta name="twitter:site" content="@yourtwitterhandle"> <!-- Soon -->
   <link rel="canonical" href="https://dantotsu.app/"> 
@@ -24,48 +24,50 @@
   <title>Dantotsu</title>
 </head>
 <style>
-  html {
+ html, body {
+    
+    overflow-x: hidden;
     scroll-behavior: smooth;
-  }
+}
 </style>
 <body class="bg-indigo-950">     
   <!-- NAVBAR -->
   <nav class="bg-slate-950 bg-opacity-0 transition bg-transition text-white p-2 fixed w-full z-50 ">
     <div class="container mx-auto flex justify-between">
       <div class="flex items-center">
-        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 hover:opacity-80" ></a>
+        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 transition-opacity hover:opacity-80" ></a>
         <small class="text-xs ml-2">v1.0.0 (Beta)</small>
       </div>
       <div class="flex items-center">
-        <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
-        <a href="https://discord.com/invite/4HPZ5nAWwM" class="mr-4 hover:text-purple-500"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/rebelonion/Dantotsu" class="hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
+        <a href="https://discord.com/invite/4HPZ5nAWwM" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/rebelonion/Dantotsu" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
   </nav>  
   <!-- HERO -->
-<section class=" text-white py-20 h-screen relative" style="background-image: url('images/ei_1698849603612-removebg-preview-1.png'); background-size: cover; background-position: center;">
+<section id="hero" class=" text-white py-20 h-screen shadow-lg relative" style="background-image: url('images/ei_1698849603612-removebg-preview-1.png'); background-size: cover; background-position: center;">
   <div class="container h-full mx-auto flex flex-col justify-center items-center relative z-10">
     <div class="text-center">
       <h1 class="text-5xl font-bold">Dantotsu</h1>
       <h2 class="text-2xl font-bold">Read & Watch Anywhere</h2>
-      <p class="text-sm">Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions</h4>
+      <p class="text-sm">An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions.</h4>
       <div class="flex justify-center items-center mt-8 space-x-4">
           <!-- download button -->
           <a href="https://github.com/rebelonion/Dantotsu/releases/tag/v1.0.0" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full py-3 px-10 font-bold">Download</a>
           <!-- view features button -->
-        <a href="#section1" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full">Features</a>
+        <a href="#features" class="bg-purple-950 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full font-bold transition-colors">Features</a>
       </div>
     </div>
   </div>
-  <div class="absolute inset-0 bg-black bg-opacity-80 shadow-md"></div>
+  <div id="opbg" class="absolute inset-0 bg-black bg-opacity-80 transition-colors"></div>
 </section>
 <!-- FEATURE 1 -->
-<section class=" text-white py-8 shadow-md" id="section1">
+<section class=" text-white py-8 shadow-md" id="features">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
     <!-- Box one, feature description -->
     <div class="md:w-1/2 md:pr-4 mb-4 md:mb-0">
-      <h2 class="text-3xl font-bold mb-2">Catch Up on Your Favorites!</h2>
+      <h2 class="text-3xl font-bold mb-2">Catch Up On Your Favorites!</h2>
       <p class="text-lg">Dantotsu is designed for anime and manga enthusiasts who want to catch up on their favorite series. It's a user-friendly app that lets you enjoy your "favorite" anime and manga on the go. With integrated Anilist support, you can easily track your progress and stay up to date with what your friends are watching and reading.</p>
     </div>
     <!-- Box two, image of feature -->
@@ -214,9 +216,21 @@
   window.addEventListener('scroll', function () {
     const navbar = document.querySelector('nav');
     if (window.scrollY > 0) {
-      navbar.classList.add('bg-opacity-90');
+      navbar.classList.add('bg-opacity-80');
     } else {
-      navbar.classList.remove('bg-opacity-90');
+      navbar.classList.remove('bg-opacity-80');
+    }
+  });
+
+  // hero opacity change when the user is on the "#feature" section 
+  // bg-opacity-80 to bg-opacity-100
+  // <div id="opbg" class="absolute inset-0 bg-black bg-opacity-80 ransition bg-transition shadow-md"></div>
+  window.addEventListener('scroll', function () {
+    const opbg = document.querySelector('#opbg');
+    if (window.scrollY > 600) {
+      opbg.classList.add('bg-opacity-100');
+    } else {
+      opbg.classList.remove('bg-opacity-100');
     }
   });
   // Open the staff showcase popup
