@@ -166,7 +166,7 @@
 </section>
 <br />
 <!-- Staff Showcase Popup -->
-<div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+<div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden rounded-md">
   <div class="bg-slate-800 p-4 md:mx-4 rounded-lg shadow-lg w-full md:w-auto max-h-[80vh] overflow-y-auto">
     <div class="text-right">
       <button id="closePopup" class="text-white hover:text-gray-500 text-xl p-4"><i class="fa-solid fa-times"></i></button>
@@ -216,9 +216,6 @@
         </div>
       </div>
     </div>
-
-    
-    </div>
   </div>
 </div>
 
@@ -246,17 +243,17 @@
       navbar.classList.remove('bg-opacity-80');
     }
   });
-  // JavaScript to handle the language dropdown
-  const languageDropdown = document.getElementById('languageDropdown');
-  const languageOptions = document.getElementById('languageOptions');
+  // // JavaScript to handle the language dropdown
+  // const languageDropdown = document.getElementById('languageDropdown');
+  // const languageOptions = document.getElementById('languageOptions');
 
-  // Toggle the visibility of language options when the dropdown button is clicked
-  languageDropdown.addEventListener('click', () => {
-    languageOptions.classList.toggle('hidden');
-  });
+  // // Toggle the visibility of language options when the dropdown button is clicked
+  // languageDropdown.addEventListener('click', () => {
+  //   languageOptions.classList.toggle('hidden');
+  // });
 
-  // // Close the language options when a language is selected
-  // const languageLinks = languageOptions.querySelectorAll('a');
+  // // // Close the language options when a language is selected
+  // // const languageLinks = languageOptions.querySelectorAll('a');
   // languageLinks.forEach((link) => {
   //   link.addEventListener('click', () => {
   //     languageOptions.classList.add('hidden');
