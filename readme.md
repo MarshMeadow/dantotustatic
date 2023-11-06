@@ -2,7 +2,7 @@ This is a static page hosted on https://dantotsu.app/.
 
 For more information, please visit our GitHub repository at https://github.com/rebelonion/Dantotsu.
 
-This is run by the Dantotsu Web Team!
+# **This is run by the Dantotsu Web Team!**
 
 - Rebel Onion (Creator of Dantotsu)
 
