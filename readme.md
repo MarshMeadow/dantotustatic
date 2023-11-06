@@ -8,7 +8,7 @@ This is run by the Dantotsu Web Team!
 
 - Wai What (Creator of Dantotsu's Branding)
 
-- Neko404 (Main Web Dev)
+- **Neko404 (Main Web Dev)**
 
 - Ayodaza (Main Web Dev / Website's Concept Designer)
 
