@@ -1,4 +1,4 @@
-**Do Not Share Source Code Please**
+**Please Do Not Share Source Code**
 
 This is a static page hosted on https://dantotsu.app/. 
 
@@ -15,3 +15,5 @@ For more information, please visit our GitHub repository at https://github.com/r
 - Ayodaza (Main Web Dev / Website's Concept Designer)
 
 - Aayush262 (Screenshot Provider)
+
+**Web Team Group Discord: Private For Now**
