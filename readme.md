@@ -17,4 +17,4 @@ For more information, please visit our GitHub repository at https://github.com/r
 - Aayush262 (Screenshot Provider)
 
 **Web Team Group Discord: Private For Now**
-**Contact @Neko404 to contribute!**
+**Contact: @Neko404 to contribute!**
