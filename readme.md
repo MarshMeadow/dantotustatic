@@ -1,4 +1,4 @@
-**Please Do Not Share Source Code**
+**Please Do Not Steal/Share Source Code**
 
 This is a static page hosted on https://dantotsu.app/. 
 
