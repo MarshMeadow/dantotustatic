@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions">
+  <meta name="description" content="An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions">
   <meta name="author" content="Rebel-Onion">
-  <meta name="keywords" content="Anilist, OpenSource, Tachiyomi, Aniyomi, Anime-app">
+  <meta name="keywords" content="Anilist Client, OpenSource, Tachiyomi, Aniyomi, Anime app, Anilist Sync">
   <meta property="og:title" content="Dantotsu">
   <meta property="og:description" content="Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions">
   <meta property="og:image" content=""> 
@@ -18,53 +18,79 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="manifest" href="favicons/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#4d006b">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/0a1007e48a.js" crossorigin="anonymous"></script>
   <title>Dantotsu</title>
 </head>
 <style>
-  html {
+ html, body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
-  }
+}
 </style>
-<body class="bg-indigo-950">
+<body class="bg-indigo-950">     
   <!-- NAVBAR -->
-  <nav class="bg-slate-950 bg-opacity-90 text-white p-2 fixed w-full z-10">
+  <nav class="bg-slate-950 bg-opacity-0 transition bg-transition text-white p-2 fixed w-full z-40">
     <div class="container mx-auto flex justify-between">
       <div class="flex items-center">
-        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 hover:opacity-80"></a>
+        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu" class="h-10 transition-opacity hover:opacity-80"></a>
+        <small class="text-xs ml-2">v1.0.0 (Beta)</small>
       </div>
       <div class="flex items-center">
-        <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
-        <a href="https://discord.com/invite/4HPZ5nAWwM" class="mr-4 hover:text-purple-500"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/rebelonion/Dantotsu" class="hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        <!-- <div class="relative group">
+          <button id="languageDropdown" class="mr-4 transition-colors hover:text-purple-500">
+            <i class="fa-solid fa-globe"></i> 
+          </button>
+          <ul id="languageOptions" class="absolute hidden bg-white text-black p-2 space-y-1 rounded-lg shadow-md right-0 mt-3">
+            <button class="language-button" data-lang="en">English</button>
+            <button class="language-button" data-lang="hi">Hindi</button>
+            <button class="language-button" data-lang="es">Spanish</button>
+          </ul>
+        </div> -->
+        <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
+        <a href="https://discord.com/invite/4HPZ5nAWwM" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/rebelonion/Dantotsu" class="mr-4 transition-colors hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
-  </nav>  
+  </nav>
+  
   <!-- HERO -->
-<section class=" text-white py-20 h-screen relative" style="background-image: url('images/ei_1698849603612-removebg-preview-1.png'); background-size: cover; background-position: center;">
-  <div class="container h-full mx-auto flex flex-col justify-center items-center relative z-10">
-    <div class="text-center">
-      <h1 class="text-5xl font-bold">Dantotsu</h1>
-      <h2 class="text-2xl font-bold">Read & Watch Anywhere (V1.00)</h2>
-      <h4 class="text-lg">Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions</h4>
-      <div class="flex justify-center items-center mt-10">
-        <!-- download button -->
-        <a href="https://github.com/rebelonion/Dantotsu/releases" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full mr-4">Download</a>
-        <!-- view features button -->
-        <a  href="#section1" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full">Features</a>
-      </div>      
+  <section id="hero" class="text-white py-20 h-screen shadow-lg relative" style="background-image: url('images/ei_1698849603612-removebg-preview-1.png'); background-size: cover; background-position: center;">
+    <div class="container h-full mx-auto flex flex-col justify-center items-center relative z-10">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold" data-lang="en">Dantotsu</h1>
+        <h1 class="text-5xl font-bold" data-lang="hi" style="display: none;">दंतोत्सु</h1>
+        <h1 class="text-5xl font-bold" data-lang="es" style="display: none;">Dantotsu en Español</h1>
+        
+        <h2 class="text-2xl font-bold" data-lang="en">Read & Watch Anywhere</h2>
+        <h2 class="text-2xl font-bold" data-lang="hi" style="display: none;">कहीं भी पढ़ें और देखें</h2>
+        <h2 class="text-2xl font-bold" data-lang="es" style="display: none;">Leer y Ver en Cualquier Lugar</h2>
+        
+        <p class="text-sm" data-lang="en">An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions.</p>
+        <p class="text-sm" data-lang="hi" style="display: none;">दंतोत्सु, एक Anilist प्रेमियों के लिए एक ओपन सोर्स मोबाइल एप्लिकेशन है, जिसे सायकू से प्रेरित किया गया है और टाची/आनियोमी एक्सटेंशन्स के साथ बढ़ाया गया है।</p>
+        <p class="text-sm" data-lang="es" style="display: none;">Una aplicación móvil de código abierto para entusiastas de Anilist, inspirada en Saikou y mejorada con extensiones de Tachi/Aniyomi.</p>
+        
+        <div class="flex justify-center items-center mt-8 space-x-4">
+          
+          <!-- download button -->
+          <a href="https://github.com/rebelonion/Dantotsu/releases" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full py-3 px-10 font-bold">Download</a>
+          
+          <!-- view features button -->
+          <a href="#features" class="bg-purple-950 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full font-bold transition-colors">Features</a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="absolute inset-0 bg-slate-950 bg-opacity-80"></div>
-</section>
+    <div id="opbg" class="absolute inset-0 bg-black bg-opacity-80 transition-colors"></div>
+  </section>
+  
+  
 <!-- FEATURE 1 -->
-<section class=" text-white py-8" id="section1">
+<section class=" text-white py-8 shadow-md" id="features">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
     <!-- Box one, feature description -->
     <div class="md:w-1/2 md:pr-4 mb-4 md:mb-0">
-      <h2 class="text-3xl font-bold mb-2">Catch Up on Your Favorites!</h2>
+      <h2 class="text-3xl font-bold mb-2">Catch Up On Your Favorites!</h2>
       <p class="text-lg">Dantotsu is designed for anime and manga enthusiasts who want to catch up on their favorite series. It's a user-friendly app that lets you enjoy your "favorite" anime and manga on the go. With integrated Anilist support, you can easily track your progress and stay up to date with what your friends are watching and reading.</p>
     </div>
     <!-- Box two, image of feature -->
@@ -73,7 +99,6 @@
     </div>
   </div>
 </section>
-<br />
 <!-- FEATURE 2 -->
 <section class="bg-purple-950 text-white py-8" id="section2">
   <div class="container mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between">
@@ -110,79 +135,93 @@
     </div>
   </div>
 </section>
-<br />
 <!-- Review Section-->
 <section class="py-8 text-white">
-  <div class="container mx-auto">
-    <h1 class="text-3xl font-bold text-center mb-4">Reviews of the app</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <!-- Review 1 -->
-      <div class="bg-white p-4 rounded-lg shadow-md text-black">
+  <div class="container mx-auto p-4">
+    <button type="button" id="collapsible" class="text-lg font-bold bg-black  text-white hover:bg-gray-900 focus:outline-none py-4 px-4 w-full rounded-md shadow-lg text-center">Reviews for Dantotsu</button>
+    <div id="content" class="p-4 text-white bg-black hidden rounded-md shadow-lg">
+      <div class="bg-black p-4 rounded-lg shadow-xl text-white">
         <div class="flex items-center mb-2">
           <img src="images/Discordpfps/aa31dc99f8cce991d430cd19e25f8ab2.jpg" alt="Reviewer Avatar" class="w-12 h-12 rounded-full">
           <p class="text-lg font-bold ml-2">zaxx_69</p>
         </div>
-        <p class="text-gray-600">"The UI of this app is peak, and the support of the dev is also good. The ability to watch and read anime/manga in one app with good UI is rare nowadays. It also supports blazingly fast streaming and downloading. The Anilist support of the app helps me track all my anime/manga. The extension support along with tweaks is nothing short of amazing. Glad to be a user of this app."</p>
-      </a>
-      </div>
-
-      <!-- Review 2 -->
-      <div class="bg-white p-4 rounded-lg shadow-md text-black">
+        <p class="text-white-600">"The UI of this app is peak, and the support of the dev is also good. The ability to watch and read anime/manga in one app with good UI is rare nowadays. It also supports blazingly fast streaming and downloading. The Anilist support of the app helps me track all my anime/manga. The extension support along with tweaks is nothing short of amazing. Glad to be a user of this app."</p>
+        <hr class="my-4">
         <div class="flex items-center mb-2">
           <img src="images/Discordpfps/4b38019d3a3c1f820ce020f036ae6cc0.png" alt="Reviewer Avatar" class="w-12 h-12 rounded-full">
           <p class="text-lg font-bold ml-2">jotaro_4k20</p>
         </div>
-        <p class="text-gray-600">"One of the best anime streaming and manga reading app out there ! 
+     <p class="text-white-600">"One of the best anime streaming and manga reading app out there ! 
           The anime episodes loads in a flash ....and also the UI of the app is dope 🔥 ! 
           A  10/10  app for animangas 😉"</p>
+          <h6 class="text-center mt-4">Want to leave a review? Join our <a href="https://discord.com/invite/4HPZ5nAWwM" class="text-purple-500 hover:text-purple-600">Discord</a>!</h6>
       </div>
-    </div>  
-    <h6 class="text-center mt-4">Want to leave a review? Join our <a href="https://discord.com/invite/4HPZ5nAWwM" class="text-purple-500 hover:text-purple-600">Discord</a>!</h6>
-  </div>
-</section>
-<br />
-<!-- Staff Showcase Popup -->
-<div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-  <div class="bg-white p-4 rounded-lg shadow-lg">
-    <div class="text-right">
-      <button id="closePopup" class="text-gray-500 hover:text-gray-700 text-lg">Close</button>
     </div>
-    <h2 class="text-2xl font-bold mb-4">Website Credits</h2>
+    </div>
+</section>
+
+<!-- Staff Showcase Popup -->
+<div id="staffPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden rounded-md">
+  <div class="bg-slate-800 p-4 md:mx-4 rounded-lg shadow-lg w-full md:w-auto max-h-[80vh] overflow-y-auto">
+    <div class="text-right">
+      <button id="closePopup" class="text-white hover:text-gray-500 text-xl p-4"><i class="fa-solid fa-times"></i></button>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff1.jpg" alt="Staff Member 1" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Rebel Union</p>
-        <p class="text-gray-600">Creator of Dantotsu</p>
+      <div class="bg-slate-900 p-4 rounded-lg shadow-md">
+        <img src="images/Discordpfps/rebelonion.png" alt="Rebel Union" class="w-20 h-20 rounded-full mb-2">
+        <p class="text-lg text-purple-600 font-bold mb-2">Rebel Onion</p>
+        <p class="text-gray-500">Creator of Dantotsu</p>
+        <!-- social icons-->
+        <div class="flex items-center mt-4">
+          <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 text-white hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
+          <a href="https://www.github.com/rebelonion" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
-      <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 2" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">wai_what</p>
-        <p class="text-gray-600">Branding creator / Screenshots Provider</p>
+      <div class="bg-slate-900 p-4 rounded-lg shadow-md">
+        <img src="images/Discordpfps/waiwaht.png" alt="Wai What" class="w-20 h-20 rounded-full mb-2">
+        <p class="text-lg text-purple-600 font-bold mb-2">Wai What</p>
+        <p class="text-gray-500">Creator of Dantotsu's Branding</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/WaiWhat" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
-      <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 3" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Ayodaza</p>
-        <p class="text-gray-600">Graphic Designer / Main Dev for Dantotsu website</p>
+      <div class="bg-slate-900 p-4 rounded-lg shadow-md">
+        <img src="images/Discordpfps/neko.png" alt="Neko404" class="w-20 h-20 rounded-full mb-2">
+        <p class="text-lg text-purple-600 font-bold mb-2">Neko404</p>
+        <p class="text-gray-500">Main Web Dev</p>
+        <p class="text-gray-500">If the world knew that I have the source code to the universe, they would give me all the cookies, hehe.</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/MarshMeadow?tab=repositories" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+          <a href="https://ko-fi.com/marshmeadow" class="mr-4 text-white hover:text-purple-500"><i class="fa-solid fa-mug-saucer"></i></a>
+        </div>
       </div>
-      <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 4" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">Neko</p>
-        <p class="text-gray-600">Main Dev for Dantotsu website (Neocities)</p>
+      <div class="bg-slate-900 p-4 rounded-lg shadow-md">
+        <img src="images/Discordpfps/ayodaza.png" alt="Ayodaza" class="w-20 h-20 rounded-full mb-2">
+        <p class="text-lg text-purple-600 font-bold mb-2">Ayodaza</p>
+        <p class="text-gray-500">Main Web Dev / Website's Concept Designer</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/dazadev" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+          <a href="https://twitter.com/ayodaza" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-twitter"></i></a>
+        </div>
       </div>
-      <div class="bg-purple-200 p-4 rounded-lg shadow-md">
-        <img src="images/staff2.jpg" alt="Staff Member 5" class="w-20 h-20 rounded-full mb-2">
-        <p class="text-lg font-bold mb-2">aayush262</p>
-        <p class="text-gray-600">Phone mockups designer</p>
+      <div class="bg-slate-900 p-4 rounded-lg shadow-md">
+        <img src="images/Discordpfps/aayum.jpg" alt="aayush262" class="w-20 h-20 rounded-full mb-2">
+        <p class="text-lg text-purple-600 font-bold mb-2">Aayush262</p>
+        <p class="text-gray-500">Screenshot Provider</p>
+        <div class="flex items-center mt-4">
+          <a href="https://github.com/aayush2622" class="mr-4 text-white hover:text-purple-500"><i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+
   <!-- FOOTER -->
 <footer class="bg-slate-950 text-white py-4">
   <div class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between">
     <div class="md:w-full text-center md:text-left mb-2 md:mb-0">
-      <p class="text-sm">© 2023 Dantotsu. All rights reserved. | Design by @Ayodaza </p>
+      <p class="text-sm"><i class="fa-solid fa-code"></i> with <i class="fa-solid fa-heart"></i> by Dantotsu Contributors</p>
     </div>
     <div class="md:w-full text-center md:text-right">
       <button id="openPopup" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">Credits</button>
@@ -192,16 +231,85 @@
 
 </body>
 <script>
+  // navbar
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('nav');
+    if (window.scrollY > 0) {
+      navbar.classList.add('bg-opacity-80');
+    } else {
+      navbar.classList.remove('bg-opacity-80');
+    }
+  });
+  // // JavaScript to handle the language dropdown
+  // const languageDropdown = document.getElementById('languageDropdown');
+  // const languageOptions = document.getElementById('languageOptions');
+
+  // // Toggle the visibility of language options when the dropdown button is clicked
+  // languageDropdown.addEventListener('click', () => {
+  //   languageOptions.classList.toggle('hidden');
+  // });
+
+  // // // Close the language options when a language is selected
+  // // const languageLinks = languageOptions.querySelectorAll('a');
+  // languageLinks.forEach((link) => {
+  //   link.addEventListener('click', () => {
+  //     languageOptions.classList.add('hidden');
+  //   });
+  // });
+
+  // // Close the language options when clicking outside of the dropdown
+  // window.addEventListener('click', (event) => {
+  //   if (!languageDropdown.contains(event.target) && !languageOptions.contains(event.target)) {
+  //     languageOptions.classList.add('hidden');
+  //   }
+  // });
+
+  // const languageButtons = document.querySelectorAll('.language-button');
+
+  // Change the language when a language button is clicked 
+  // keep the language buttons unhidden 
+  // languageButtons.forEach((button) => {
+  //   button.addEventListener('click', () => {
+  //     const language = button.dataset.lang;
+  //     const elements = document.querySelectorAll(`[data-lang]`);
+  //     elements.forEach((element) => {
+  //       element.style.display = 'none';
+  //     });
+  //     const elementsToShow = document.querySelectorAll(`[data-lang=${language}]`);
+  //     elementsToShow.forEach((element) => {
+  //       element.style.display = 'block';
+  //     });
+  //   });
+  // });
+
+
+  // hero
+  window.addEventListener('scroll', function () {
+    const opbg = document.querySelector('#opbg');
+    if (window.scrollY > 600) {
+      opbg.classList.add('bg-opacity-100');
+    } else {
+      opbg.classList.remove('bg-opacity-100');
+    }
+  });
   // Open the staff showcase popup
   document.getElementById('openPopup').addEventListener('click', function () {
     document.getElementById('staffPopup').classList.remove('hidden');
   });
-
   // Close the staff showcase popup
   document.getElementById('closePopup').addEventListener('click', function () {
     document.getElementById('staffPopup').classList.add('hidden');
   });
+  // reviews
+  const collapsibleButton = document.getElementById("collapsible");
+  const content = document.getElementById("content");
+
+  let isContentVisible = false;
+
+  collapsibleButton.addEventListener("click", function() {
+    isContentVisible = !isContentVisible;
+    content.style.display = isContentVisible ? "block" : "none";
+  });
+
 </script>
-
-
 </html>
