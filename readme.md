@@ -6,15 +6,17 @@ For more information, please visit our GitHub repository at https://github.com/r
 
 # **This is run by the Dantotsu Web Team!**
 
-- Rebel Onion (Creator of Dantotsu)
+- [Rebel Onion](https://github.com/rebelonion) (Creator of Dantotsu)
 
-- Wai What (Creator of Dantotsu's Branding)
+- [Wai What](https://github.com/WaiWhat) (Creator of Dantotsu's Branding)
 
-- **Neko404 (Main Web Dev)**
+- **[Neko404](https://github.com/MarshMeadow?tab=repositories) (Main Web Dev)**
 
-- Ayodaza (Main Web Dev / Website's Concept Designer)
+- [Arif Alam]([https://github.com/ARIF683](https://github.com/ARIF683?tab=repositories)) (Contributor of Dantotsu Website / Discord Moderator.)
 
-- Aayush262 (Screenshot Provider)
+- [Ayodaza](https://github.com/dazadev) (Main Web Dev / Website's Concept Designer)
+
+- [Aayush262](https://github.com/aayush2622) (Screenshot Provider)
 
 **Web Team Group Discord: Private For Now**
 
