@@ -12,7 +12,7 @@ For more information, please visit our GitHub repository at https://github.com/r
 
 - **[Neko404](https://github.com/MarshMeadow?tab=repositories) (Main Web Dev)**
 
-- [Arif Alam]([https://github.com/ARIF683](https://github.com/ARIF683?tab=repositories) (Contributor of Dantotsu Website / Discord Moderator.)
+- [Arif Alam](https://github.com/ARIF683?tab=repositories) (Contributor of Dantotsu Website / Discord Moderator.)
 
 - [Ayodaza](https://github.com/dazadev) (Main Web Dev / Website's Concept Designer)
 
