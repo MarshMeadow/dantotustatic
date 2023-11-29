@@ -1,1 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="An open-source mobile application for Anilist enthusiasts, inspired by Saikou and enhanced with Tachi/Aniyomi extensions">
+  <meta name="author" content="Rebel-Onion">
+  <meta name="keywords" content="Anilist Client, OpenSource, Tachiyomi, Aniyomi, Anime app, Anilist Sync">
+  <meta property="og:title" content="Dantotsu">
+  <meta property="og:description"
+    content="Open source mobile Anilist client based off Saikou with Tachi/Aniyomi extensions">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://www.dantotsu.app">
+  <meta name="twitter:card" content="summary_large_image"> <!-- Soon  -->
+  <meta name="twitter:site" content="@yourtwitterhandle"> <!-- Soon -->
+  <link rel="canonical" href="https://www.dantotsu.app">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#4d006b">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/0a1007e48a.js" crossorigin="anonymous"></script>
+  <title>Dantotsu</title>
+</head>
+<style>
+  html,
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body class="bg-indigo-950">
+  <!-- NAVBAR -->
+  <nav class="bg-slate-950 bg-opacity-0 transition bg-transition text-white p-2 fixed w-full z-40">
+    <div class="container mx-auto flex justify-between">
+      <div class="flex items-center">
+        <a href="#" class="text-2xl font-bold"><img src="images/dantotsu_logo-f1s.png" alt="Dantotsu"
+            class="h-10 transition-opacity hover:opacity-80"></a>
+        <small class="text-xs ml-2">v1.0.0 (Beta)</small>
+      </div>
+      <div class="flex items-center">
+        <!-- <div class="relative group">
+          <button id="languageDropdown" class="mr-4 transition-colors hover:text-purple-500">
+            <i class="fa-solid fa-globe"></i> 
+          </button>
+          <ul id="languageOptions" class="absolute hidden bg-white text-black p-2 space-y-1 rounded-lg shadow-md right-0 mt-3">
+            <button class="language-button" data-lang="en">English</button>
+            <button class="language-button" data-lang="hi">Hindi</button>
+            <button class="language-button" data-lang="es">Spanish</button>
+          </ul>
+        </div> -->
+        <a href="https://www.buymeacoffee.com/rebelonion" class="mr-4 transition-colors hover:text-purple-500"><i
+            class="fa-solid fa-mug-saucer"></i></a>
+        <a href="https://discord.com/invite/4HPZ5nAWwM" class="mr-4 transition-colors hover:text-purple-500"><i
+            class="fa-brands fa-discord"></i></a>
+        <a href="https://t.me/+gzBCQExtLQo1YTNh" class="mr-4 transition-colors hover:text-purple-500"><i
+            class="fa-brands fa-telegram"></i></a>
+        <a href="https://github.com/rebelonion/Dantotsu" class="mr-4 transition-colors hover:text-purple-500"><i
+            class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="text-white py-20 h-screen shadow-lg relative"
+    style="background-image: url('images/ei_1698849603612-removebg-preview-1.png'); background-size: cover; background-position: center;">
+    <div class="container h-full mx-auto flex flex-col justify-center items-center relative z-10">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold" data-lang="en">Dantotsu</h1>
+        <h1 class="text-5xl font-bold" data-lang="hi" style="display: none;">दंतोत्सु</h1>
+        <h1 class="text-5xl font-bold" data-lang="es" style="display: none;">Dantotsu en Español</h1>
+
+        <h2 class="text-2xl font-bold" data-lang="en">Read & Watch Anywhere</h2>
+        <h2 class="text-2xl font-bold" data-lang="hi" style="display: none;">कहीं भी पढ़ें और देखें</h2>
+        <h2 class="text-2xl font-bold" data-lang="es" style="display: none;">Leer y Ver en Cualquier Lugar</h2>
+
+        <p class="text-sm" data-lang="en">An open-source mobile application for Anilist enthusiasts, inspired by Saikou
+          and enhanced with Tachi/Aniyomi extensions.</p>
+        <p class="text-sm" data-lang="hi" style="display: none;">दंतोत्सु, एक Anilist प्रेमियों के लिए एक ओपन सोर्स
+          मोबाइल एप्लिकेशन है, जिसे सायकू से प्रेरित किया गया है और टाची/आनियोमी एक्सटेंशन्स के साथ बढ़ाया गया है।</p>
+        <p class="text-sm" data-lang="es" style="display: none;">Una aplicación móvil de código abierto para entusiastas
+          de Anilist, inspirada en Saikou y mejorada con extensiones de Tachi/Aniyomi.</p>
+
+        <div class="flex justify-center items-center mt-8 space-x-4">
+
+          <!-- download button -->
+          <a href="https://github.com/rebelonion/Dantotsu/releases"
+            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-full py-3 px-10 font-bold">Install</a>
+
+          <!-- view features button -->
+          <a href="#features"
+            class="bg-purple-950 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full font-bold transition-colors">Features</a>
+        </div>
+      </div>
+    </div>
+    <div id="opbg" class="absolute inset-0 bg-black bg-opacity-80 transition-colors"></div>
+  </section>
