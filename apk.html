@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Download</title>
+    <title>Direct Automatic Download</title>
 </head>
 <body>
+    <p>This page will automatically start downloading the file when loaded.</p>
+
+    <a href="/path/to/your/file.zip" download="filename.zip" id="https://github.com/rebelonion/Dantotsu/releases/download/v2.1.0/app-release.apk">Download File</a>
+
     <script>
-        // Use JavaScript to simulate a click on an invisible link
+        // Use JavaScript to simulate a click on the link when the page loads
         window.onload = function() {
-            var downloadLink = document.createElement('a');
-            downloadLink.href = '/path/to/your/file.zip';
-            downloadLink.download = 'filename.zip';
-            downloadLink.style.display = 'none';
-            document.body.appendChild(downloadLink);
-            downloadLink.click(https://github.com/rebelonion/Dantotsu/releases/download/v2.1.0/app-release.apk);
-            document.body.removeChild(downloadLink);
+            document.getElementById('downloadLink').click();
         };
     </script>
 </body>
