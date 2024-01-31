@@ -1,38 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Background</title>
-    <style>
-        body {
-            background-color: #000; /* Hex color for black */
-            color: #fff; /* Text color */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-    </style>
+    <title>Automatic Download from Latest GitHub Release</title>
 </head>
 <body>
-</body>
-</html>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direct Automatic Download</title>
-</head>
-<body>
-    <p>This page will automatically start downloading the file when loaded.</p>
-
-    <a href="https://github.com/rebelonion/Dantotsu/releases/download/v2.1.0/app-release.apk" download="app-release.apk" download="" id="downloadLink" id="downloadLink">Download File</a>
-
     <script>
-        // Use JavaScript to simulate a click on the link when the page loads
+        // Function to fetch latest release information from GitHub API
+        function getLatestRelease() {
+            fetch('https://api.github.com/repos/rebelonion/Dantotsu/releases/latest')
+                .then(response => response.json())
+                .then(data => {
+                    // Assuming there's only one asset in the release for simplicity
+                    var asset = data.assets[0];
+                    var downloadLink = document.createElement('a');
+                    downloadLink.href = asset.browser_download_url;
+                    downloadLink.download = asset.name;
+                    downloadLink.click();
+                })
+                .catch(error => console.error('Error fetching latest release:', error));
+        }
+
+        // Call the function when the page loads
         window.onload = function() {
-            document.getElementById('downloadLink').click();
+            getLatestRelease();
         };
     </script>
 </body>
