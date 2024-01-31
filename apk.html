@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Download</title>
+</head>
+<body>
+    <script>
+        // Use JavaScript to simulate a click on an invisible link
+        window.onload = function() {
+            var downloadLink = document.createElement('a');
+            downloadLink.href = '/path/to/your/file.zip';
+            downloadLink.download = 'filename.zip';
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click(https://github.com/rebelonion/Dantotsu/releases/download/v2.1.0/app-release.apk);
+            document.body.removeChild(downloadLink);
+        };
+    </script>
+</body>
+</html>
