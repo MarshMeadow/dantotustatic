@@ -24,4 +24,4 @@ For more information, please visit our GitHub repository at https://github.com/r
 
 [Join Telegram](https://t.me/+gzBCQExtLQo1YTNh)
 
-**Contact: @Neko404 to contribute!**
+**Contact: @Neko404 to contribute!** (Neko is the the dev of dantotsu, just a contributor).
