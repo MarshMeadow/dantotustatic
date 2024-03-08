@@ -82,45 +82,9 @@
           <!-- download button -->
           <div class = "mb-8">
 
-    <!-- Button to trigger download -->
-   <button id="downloadButton"><class="bg-purple-950 hover:bg-purple-600 text-white font-bold py-3 px-7 rounded-full transition-colors">Download Latest Release</button>
-      
-    <script>
-
-    var REPO = "rebelonion/Dantotsu";
-
-    var API_URL = "https://api.github.com/repos/" + REPO + "/releases/latest";
-
-    function downloadFile(url, filename) {
-        var link = document.createElement('a');
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-
-    function downloadLatestRelease() {
-        fetch(API_URL)
-            .then(response => response.json())
-            .then(data => {
-                var asset = data.assets.find(asset => asset.name === 'app-release.apk');
-
-                // If the asset is found, download it
-                if (asset) {
-                    downloadFile(asset.browser_download_url, 'app-release.apk');
-                } else {
-                    console.error('Asset app-release.apk not found in the latest release');
-                }
-            })
-            .catch(console.error);
-    }
-
-    document.getElementById('downloadButton').addEventListener('click', downloadLatestRelease);
-    </script>
+<button id="downloadButton">Download Latest Release</button>
+document.getElementById('downloadButton').addEventListener('click', downloadLatestRelease);
             
-            </div>
-
      <!-- view download buttonn -->
      <div class ="">
           <a href="https://github.com/rebelonion/Dantotsu/releases/download/v2.2.0-beta02/app-debug.apk"
