@@ -1,34 +1,62 @@
 ﻿<!DOCTYPE html>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Check</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        // Function to close the tab if reCAPTCHA checkbox is not checked after 6 seconds
-        function closeTab() {
-            setTimeout(function() {
-                var checkbox = document.getElementById('g-recaptcha-response');
-                if (!checkbox || !checkbox.value) {
-                    window.close();
-                }
-            }, 6000); // 6000 milliseconds = 6 seconds
+    <title>Human Verification</title>
+    <style>
+        /* Style for the pop-up window */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            z-index: 1000;
         }
-        // Call the function when the page loads
-        window.onload = closeTab;
+        /* Style for the overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            z-index: 999;
+        }
+    </style>
+    <script>
+        // Function to show the pop-up window and overlay
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to close the pop-up window and overlay
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
     </script>
 </head>
-<body>
-    <h1>Bot Check</h1>
-    <form action="submit.php" method="post">
-        <!-- Your form fields go here -->
-        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+<body onload="showPopup()"> <!-- Call the function when the page loads -->
+
+<!-- Pop-up window -->
+<div id="popup" class="popup">
+    <h2>Human Verification</h2>
+    <p>Please verify that you are not a bot.</p>
+    <!-- Add your verification form or any other content here -->
+    <button onclick="closePopup()">Close</button> <!-- Close button -->
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
 </body>
 </html>
 
