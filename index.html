@@ -50,8 +50,14 @@
     <script>
         // Function to show the pop-up window and overlay
         function showPopup() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
+            // Check if the flag 'popupShown' is not set in localStorage
+            if (!localStorage.getItem('popupShown')) {
+                // Show the pop-up window and overlay
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+                // Set the flag 'popupShown' in localStorage to indicate that the popup has been shown
+                localStorage.setItem('popupShown', 'true');
+            }
         }
 
         // Function to close the pop-up window and overlay
