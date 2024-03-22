@@ -6,34 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Verification</title>
     <style>
-        /* Style for the pop-up window */
+        /* Dark mode styles */
+        body {
+            background-color: #121212; /* Dark background color */
+            color: #fff; /* White text color */
+        }
         .popup {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: white;
+            background-color: #333; /* Darker background color */
             padding: 20px;
             border: 2px solid #ccc;
             border-radius: 10px;
             z-index: 1000;
         }
-        /* Style for the close button */
-        .close-btn {
-            display: inline-block;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%; /* Rounded shape */
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Smooth transition effect */
-        }
-        .close-btn:hover {
-            background-color: #0056b3; /* Darker shade on hover */
-        }
-        /* Style for the overlay */
         .overlay {
             display: none;
             position: fixed;
@@ -66,7 +55,7 @@
     <h2>Human Verification</h2>
     <p>Please verify that you are not a bot.</p>
     <!-- Add your verification form or any other content here -->
-    <button class="close-btn" onclick="closePopup()">Close</button> <!-- Close button with circle style -->
+    <button onclick="closePopup()">Close</button> <!-- Close button -->
 </div>
 
 <!-- Overlay -->
