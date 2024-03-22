@@ -33,6 +33,19 @@
             background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent black */
             z-index: 999;
         }
+        /* Square ring around the close button with rounded corners */
+        .close-button {
+            border: 2px solid #fff; /* White border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 5px 10px; /* Padding around the button */
+            background-color: transparent; /* Transparent background */
+            color: #fff; /* White text color */
+            cursor: pointer; /* Cursor style */
+        }
+        .close-button:hover {
+            background-color: #fff; /* White background color on hover */
+            color: #121212; /* Dark text color on hover */
+        }
     </style>
     <script>
         // Function to show the pop-up window and overlay
@@ -55,7 +68,7 @@
     <h2>Human Verification</h2>
     <p>Please verify that you are not a bot.</p>
     <!-- Add your verification form or any other content here -->
-    <button onclick="closePopup()">Close</button> <!-- Close button -->
+    <button class="close-button" onclick="closePopup()">Close</button> <!-- Close button with square ring -->
 </div>
 
 <!-- Overlay -->
