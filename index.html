@@ -1,4 +1,42 @@
 ﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var checkBox = document.getElementById("botCheck");
+            if (checkBox.checked == true) {
+                return true;
+            } else {
+                alert("Please confirm that you are not a bot.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bot Check</h1>
+    <form onsubmit="return validateForm()">
+        <label for="botCheck">Are you human?</label>
+        <input type="checkbox" id="botCheck" name="botCheck">
+        <br><br>
+        <input type="submit" value="Proceed">
+    </form>
+</body>
+</html>
+
+
 <html lang="en">
 
 <head>
