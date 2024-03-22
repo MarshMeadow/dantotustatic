@@ -1,11 +1,25 @@
 ﻿<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bot Check</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        // Function to close the tab if reCAPTCHA checkbox is not checked after 6 seconds
+        function closeTab() {
+            setTimeout(function() {
+                var checkbox = document.getElementById('g-recaptcha-response');
+                if (!checkbox || !checkbox.value) {
+                    window.close();
+                }
+            }, 6000); // 6000 milliseconds = 6 seconds
+        }
+        // Call the function when the page loads
+        window.onload = closeTab;
+    </script>
 </head>
 <body>
     <h1>Bot Check</h1>
