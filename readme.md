@@ -1,4 +1,5 @@
-Moved here: https://github.com/MarshMeadow/dantotsuapp.netlify.app
+
+Alert! Moved here: https://github.com/MarshMeadow/dantotsuapp.netlify.app
 
 **Official Dantotsu Website Run By The Dantotsu Web Team (Please Do Not Share)**
 
