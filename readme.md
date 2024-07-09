@@ -1,10 +1,10 @@
-**BACK UP**
+Moved here: https://github.com/MarshMeadow/dantotsuapp.netlify.app
 
 **Official Dantotsu Website Run By The Dantotsu Web Team (Please Do Not Share)**
 
 Now hosterd here: https://dantotsuapp.netlify.app
 
-Was hosted here: This is a static page hosted on https://dantotsu.app/. 
+Was hosted here: https://dantotsu.app/. (DMCA TAKEDOWN)
 
 For more information, please visit our GitHub repository at https://github.com/rebelonion/Dantotsu.
 
